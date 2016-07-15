@@ -1,0 +1,14 @@
+uuid: f9d28ee4-fb14-4afc-b16c-6219d543a9d6
+name: 'Polymer demo'
+mail: demo@demo.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

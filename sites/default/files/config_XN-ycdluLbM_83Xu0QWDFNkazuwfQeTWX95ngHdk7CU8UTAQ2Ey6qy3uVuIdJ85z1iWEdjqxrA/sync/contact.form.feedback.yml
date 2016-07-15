@@ -1,0 +1,12 @@
+uuid: fca9fc26-b660-4006-aa5a-8380b8f1e62b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: c4zaT5cyPxuTXI6JOWt3qRtMvICT9tHB6d9a5VG-CmQ
+id: feedback
+label: 'Website feedback'
+recipients:
+  - demo@demo.com
+reply: ''
+weight: 0
