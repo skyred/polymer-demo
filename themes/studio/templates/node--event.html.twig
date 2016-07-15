@@ -70,9 +70,8 @@
  *   in different view modes.
  */
 #}
-{{ attach_library('twig_polymer/webcomponents-lite') }}
-  {% polymer import "mm-node/mm-node-full.html" %}
-  <mm-node-full{{ attributes.addClass(classes) }}
+  {% polymer import "my-event.html" %}
+  <my-event{{ attributes.addClass(classes) }}
           author-attributes="{{ author_attributes.toArray()|json_encode|e('html_attr') }}"
           attributes="{{ attributes.toArray()|json_encode|e('html_attr') }}"
           url="{{ url| e('html_attr') }}"
@@ -91,13 +90,7 @@
     <data-date>
       {{ date }}
     </data-date>
-    <data-author-picture>
-      {{ author_picture }}
-    </data-author-picture>
-    <data-author-name>
-      {{ author_name }}
-    </data-author-name>
     <mm-node-content{{ content_attributes.addClass('node__content') }}>
       {{ content }}
     </mm-node-content>
-  </mm-node-full>
+  </my-event>
