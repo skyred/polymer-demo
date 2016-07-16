@@ -112,7 +112,9 @@
         @apply(--layout-flex);
       }
       a:link,
-      a:visited {
+      a:visited,
+      ::content a:link,
+      ::content a:visited{
         color: var(--app-primary-color);
         font-weight: normal;
         text-decoration: none;
@@ -138,7 +140,7 @@
           <my-event name="event"></my-event>
           <my-event name="page"></my-event>
         </neon-animated-pages>-->
-     	<content select="my-app-content"></content>
+       <content select="my-app-content"></content>
       </div>
 
     </paper-scroll-header-panel>
