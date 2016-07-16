@@ -71,26 +71,18 @@
  */
 #}
   {% polymer import "my-event.html" %}
-  <my-event{{ attributes.addClass(classes) }}
-          author-attributes="{{ author_attributes.toArray()|json_encode|e('html_attr') }}"
-          attributes="{{ attributes.toArray()|json_encode|e('html_attr') }}"
-          url="{{ url| e('html_attr') }}"
-          {% if not page %}
-          show-title="true"
-          {% endif %}
-          title="{{ node.getTitle() | e('html_attr') }}"
-          created="{{ node.getCreatedTime() | date | e('html_attr') }}"
-          {% if display_submitted %}
-          display-submitted="true"
-          {% endif %}
-          content-attributes="{{ content_attributes.toArray()|json_encode|e('html_attr') }}">
+  <my-event{{ attributes.addClass(classes) }}>
     <mm-node-heading>
       {{ label }}
     </mm-node-heading>
     <data-date>
       {{ date }}
     </data-date>
-    <mm-node-content{{ content_attributes.addClass('node__content') }}>
-      {{ content }}
-    </mm-node-content>
+    <marked-element>
+      <div class="markdown-html"></div>
+      <script type="text/markdown">
+        {{ content }}
+      </script>
+    </marked-element>
+
   </my-event>

@@ -20,7 +20,7 @@ package: Web Components
 libraries:
  - twig_polymer/webcomponents-lite
  - studio/global-styling
- - studio/enable-shadowdom
+ - polymer/enable-shadowdom
 # version: VERSION
 # core: 8.x
 regions:

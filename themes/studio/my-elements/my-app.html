@@ -55,7 +55,7 @@
         background-color: transparent;
         display: block;
         overflow: visible;
-        background: url(/images/techyizu_header_bg.jpg);
+        background: url(image/techyizu_header_bg.jpg);
         @apply(--shadow-elevation-2dp);
 
         --paper-toolbar-title: {
@@ -68,7 +68,7 @@
         margin: 0 8px;
         --paper-icon-button-ink-color: var(--app-secondary-color);
       }
-      paper-tabs {
+      ::content paper-tabs {
         width: 100%;
         max-width: 1080px;
         margin: 0 auto;
@@ -79,10 +79,10 @@
         text-transform: uppercase;
         z-index: 10;
       }
-      paper-tab {
+      ::content paper-tab {
         background: rgba(0, 0, 0, .5);
       }
-      paper-tab[link] a {
+      ::content paper-tab[link] a {
         /* These mixins (from iron-flex-layout) center the link text. */
         @apply(--layout-horizontal);
         @apply(--layout-center-center);
@@ -119,35 +119,17 @@
       }
     </style>
 
-    <app-location route="{{route}}"></app-location>
-    <app-route
-        route="{{route}}"
-        pattern="/:page"
-        data="{{routeData}}"
-        tail="{{subroute}}"></app-route>
-
     <!-- `keepCondensedHeader` makes the condensed header to not scroll away -->
     <paper-scroll-header-panel condenses keep-condensed-header header-height="128" condensed-header-height="48">
 
       <paper-toolbar id="toolbar">
-
         <div class="spacer"></div>
         <div class="middle indent bottom-text">
           <div class="title">Techyizu</div>
           <div class="subtitle">Connecting Shanghai's Startup and Tech Community</div>
         </div>
-        <paper-tabs selected="[[page]]" class="bottom" self-end>
-          <paper-tab link center-center>
-            <a href="/home" class="link" tabindex="-1">Home / 首页</a>
-          </paper-tab>
-          <paper-tab link>
-            <a href="/page/sponsors" class="link" tabindex="-1">Sponsors / 赞助组织</a>
-          </paper-tab>
-          <paper-tab link>
-            <a href="/page/about" class="link" tabindex="-1">About Us / 关于我们</a>
-          </paper-tab>
-        </paper-tabs>
-
+        <content select="paper-tabs">
+        </content>
       </paper-toolbar>
 
       <div class="content">
@@ -156,7 +138,7 @@
           <my-event name="event"></my-event>
           <my-event name="page"></my-event>
         </neon-animated-pages>
- 	<content select="my-app-content"></content>
+     	<content select="my-app-content"></content>
       </div>
 
     </paper-scroll-header-panel>

@@ -9,8 +9,3 @@ global-styling:
       css/colors.css: {}
       css/print.css: { media: print }
 
-enable-shadowdom:
-  version: 1
-  header: true
-  js:
-    js/enable_shadowdom.js: { weight: -109}
