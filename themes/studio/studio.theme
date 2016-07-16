@@ -1,0 +1,5 @@
+<?php
+function studio_theme_suggestions_views_view(array $variables) {
+ // $viewId = $variables['view']->storage->id();
+ // return ['views_view__' . $viewId];
+}

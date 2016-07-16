@@ -18,7 +18,8 @@
         background: var(--app-primary-color);
         height: 100%;
       }
-      .tile {
+      :host::content .tile,
+      ::content .tile{
         position: relative;
         display: inline-block;
         float: left;
@@ -30,105 +31,107 @@
         @apply(--layout-center-center);
         opacity: .8;
       }
-      .tile:hover {
+      :host::content .tile:hover,
+      ::content .tile:hover {
         @apply(--shadow-elevation-4dp);
         z-index: 100;
         opacity: 1;
         transition: all 1s;
       }
-      .tile:nth-of-type(1) {
+      :host::content .tile:nth-of-type(1),
+      ::content .tile:nth-of-type(1) {
         opacity: 1;
         width: calc(100% / 3);
         height: calc(100% / 3 * 2);
       }
-      .tile:nth-of-type(4) {
+      :host::content .tile:nth-of-type(4) ,
+      ::content .tile:nth-of-type(4) {
         width: calc(100% / 3);
       }
-      .tile:nth-of-type(5),
-      .tile:nth-of-type(12) {
+      :host::content .tile:nth-of-type(5),
+      ::content .tile:nth-of-type(5),
+      :host::content .tile:nth-of-type(12),
+      ::content .tile:nth-of-type(12) {
         width: calc(100% / 3);
       }
-      .tile:nth-of-type(8) {
+      :host::content .tile:nth-of-type(8),
+      ::content .tile:nth-of-type(8) {
         width: calc(100% / 3);
         height: calc(100% / 3);
       }
-      .tile:nth-of-type(8) {
+      :host::content .tile:nth-of-type(8),
+      ::content .tile:nth-of-type(8) {
         position: absolute;
         top: calc(100% / 3 * 2);
         left: 0;
         width: calc(100% / 6);
         height: calc(100% / 3);
       }
-      .tile:nth-of-type(9) {
+      :host::content .tile:nth-of-type(9),
+      ::content .tile:nth-of-type(9) {
         position: absolute;
         top: calc(100% / 3 * 2);
         left: calc(100% / 6);;
         width: calc(100% / 6);
         height: calc(100% / 3);
       }
-      .tile:nth-of-type(10) {
+      :host::content .tile:nth-of-type(10),
+      ::content .tile:nth-of-type(10) {
         position: absolute;
         top: calc(100% / 3 * 2);
         left: calc(100% / 6 * 2);;
       }
-      .tile:nth-of-type(11) {
+      :host::content .tile:nth-of-type(11),
+      ::content .tile:nth-of-type(11) {
         position: absolute;
         top: calc(100% / 3 * 2);
         left: calc(100% / 6 * 3);;
       }
-      .tile:nth-of-type(12) {
+      :host::content .tile:nth-of-type(12),
+      ::content .tile:nth-of-type(12) {
         position: absolute;
         top: calc(100% / 3 * 2);
         left: calc(100% / 6 * 4);;
       }
-      .chip-top {
+      :host::content .chip-top,
+      ::content .chip-top {
         width: 100%;
         height: 100%;
         position: absolute;
         background-repeat: no-repeat;
         background-size: 100%;
       }
-      .chip-bottom {
+      :host::content .chip-bottom,
+      ::content .chip-bottom {
         position: absolute;
         width: 100%;
         bottom: 0;
         z-index: 10;
         background-color: rgba(0, 0, 0, .5);
       }
-      .chip-date {
+      :host::content .chip-date,
+      ::content .chip-date {
         padding: 0 10px 10px;
         color: var(--app-primary-color);;
         font: var(--paper-font-caption);
       }
-      .chip-title {
+      :host::content .chip-title,
+      ::content .chip-title {
         padding: 10px;
         color: var(--app-primary-color);
         clear: both;
         display: inline-block;
         font: var(--paper-font-title);
       }
-      .event-link {
+      :host::content .event-link,
+      ::content .event-link {
         display: block;
         width: 100%;
         height: 100%;
       }
 
     </style>
-
-    <iron-ajax url="/events/frontpage-events.json" handle-as="json" last-response="{{data}}" on-response="handleResponse" auto></iron-ajax>
-    <template is="dom-repeat" items="[[data]]">
-        <div class$="[[_computeTileClass(index)]]" on-tap="handleOnTap">
-          <a class="event-link" href="event/[[item.url]]">
-            <div class="chip-top" style="background-image:url(/events/images/[[item.pic]])"></div>
-            <div class="chip-bottom">
-              <div class="chip-title">[[item.title]]</div>
-              <div class="chip-date">[[item.date]]</div>
-            </div>
-          </a>
-        </div>
-
-    </template>
-
+    <content></content>
   </template>
 
 </dom-module>
@@ -188,27 +191,6 @@
       });
     },
 
-    handleOnTap: function(event) {
-      var target = event.target;
-      while (target !== this && !target._templateInstance) {
-        target = target.parentNode;
-      }
-
-      // configure the page animation
-      this.sharedElements = {
-        'hero': target,
-        'ripple': target
-      };
-      this.animationConfig['exit'][0].gesture = {
-        x: event.x || event.pageX,
-        y: event.y || event.pageY
-      };
-
-      this.fire('tile-click', {
-        tile: target,
-        data: target._templateInstance.item
-      });
-    }
 
   });
 </script>
