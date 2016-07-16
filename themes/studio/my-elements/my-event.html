@@ -21,13 +21,11 @@
         float: right;
         margin: 20px;
       }
-      .markdown-html img:first-child {
+      :host::content .markdown-html img:first-child {
         display: none;
       }
     </style>
-    <app-location route="{{route}}"></app-location>
 
-    <iron-ajax url="/{{routeData.type}}s/{{routeData.name}}.md" handle-as="text" last-response="{{body}}" on-response="handleResponse" auto></iron-ajax>
     <img id="heroimg" src="[[heroImgUrl]]" />
     <content select="marked-element"></content>
   </template>
@@ -42,11 +40,7 @@
       ],
 
       properties: {
-        route: Object,
-        body: {
-          type: String,
-        },
-        heroImgUrl: {
+       heroImgUrl: {
           type: String,
         },
 

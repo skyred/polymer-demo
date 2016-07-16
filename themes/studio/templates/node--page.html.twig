@@ -1,0 +1,11 @@
+{% polymer import "my-event.html" %}
+<my-event{{ attributes.addClass(classes) }}
+         hero-img-url="{{ file_url(node.field_image.entity.fileuri) }}">
+    <marked-element>
+        <div class="markdown-html"></div>
+        <script type="text/markdown">
+# {{ node.getTitle() | raw }}
+{{ node.body.value | raw }}
+      </script>
+    </marked-element>
+</my-event>
