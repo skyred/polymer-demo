@@ -1,0 +1,20 @@
+uuid: 45819b26-aa0c-4c6d-8550-276a71be1161
+langcode: en
+status: true
+dependencies:
+  theme:
+    - polymer
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: polymer_local_actions
+theme: polymer
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

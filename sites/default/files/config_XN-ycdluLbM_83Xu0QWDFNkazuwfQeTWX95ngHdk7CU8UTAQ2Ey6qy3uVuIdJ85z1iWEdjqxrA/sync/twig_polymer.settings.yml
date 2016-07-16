@@ -1,0 +1,7 @@
+twig_tag: polymer
+template_import: import.html.twig
+template_element: element.html.twig
+path_components: bower_components
+auto_verbatim: true
+_core:
+  default_config_hash: OAqG7fLOUaS33e_8ak6aDQToJLW7IFhYtZ_dWB1X4Zs

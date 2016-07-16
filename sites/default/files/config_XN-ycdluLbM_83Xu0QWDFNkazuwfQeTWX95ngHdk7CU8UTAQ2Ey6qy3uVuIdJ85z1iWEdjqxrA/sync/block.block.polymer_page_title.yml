@@ -1,0 +1,20 @@
+uuid: 9f64e67b-6347-4ac3-96a7-6fb948530a42
+langcode: en
+status: true
+dependencies:
+  theme:
+    - polymer
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: polymer_page_title
+theme: polymer
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

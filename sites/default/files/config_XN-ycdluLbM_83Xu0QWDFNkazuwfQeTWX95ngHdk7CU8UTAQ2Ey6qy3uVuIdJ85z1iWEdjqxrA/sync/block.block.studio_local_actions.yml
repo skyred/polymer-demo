@@ -1,0 +1,20 @@
+uuid: d726e09d-1aaf-423d-88ad-04de751e3fa8
+langcode: en
+status: false
+dependencies:
+  theme:
+    - studio
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: studio_local_actions
+theme: studio
+region: '-1'
+weight: 1
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 56078c22-0682-4bc3-99a2-3b89f8c63793
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - studio
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: studio_messages
+theme: studio
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

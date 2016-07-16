@@ -1,0 +1,22 @@
+uuid: 5763fc10-a2b6-478f-a5c1-fa6de1d1d587
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - polymer
+_core:
+  default_config_hash: za-39d5WDUg6XvbyqSnuVYEeq6QM4qKJxW8MnoAha5A
+id: polymer_search
+theme: polymer
+region: sidebar_first
+weight: -1
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Search
+  provider: search
+  label_display: visible
+visibility: {  }
