@@ -14,13 +14,13 @@
 name: Studio
 type: theme
 core: 8.x
-base theme: polymer
+base theme: monomer
 description: 'A demo studio theme using Polymer base theme.'
 package: Web Components
 libraries:
  - twig_polymer/webcomponents-lite
  - studio/global-styling
- - polymer/enable-shadowdom
+ - monomer/enable-shadowdom
 # version: VERSION
 # core: 8.x
 regions:
@@ -33,3 +33,4 @@ regions:
   footer: 'Footer'
 libraries-override:
   classy/base: false
+
