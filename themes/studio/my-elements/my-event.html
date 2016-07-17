@@ -36,7 +36,8 @@
       is: 'my-event',
 
       behaviors: [
-        Polymer.NeonSharedElementAnimatableBehavior
+        Polymer.NeonSharedElementAnimatableBehavior,
+        Polymer.NeonAnimationRunnerBehavior,
       ],
 
       properties: {
@@ -68,6 +69,10 @@
                   duration: 600,
                   easing: 'ease-in'
                 }
+              }, {
+                name: 'hero-animation',
+                id: 'hero',
+                node: this.$.heroimg,
               }],
               'exit': [{
                 name: 'fade-out-animation',
@@ -89,6 +94,10 @@
           this.heroImgUrl = this.body.match(imgUrlPattern)[2];
         });
       },
+
+      ready: function () {
+        this.playAnimation('entry');
+      }
 
     });
   </script>

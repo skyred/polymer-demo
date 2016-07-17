@@ -195,6 +195,14 @@
       });
     },
 
+    ready: function () {
+      var distributed = this.getContentChildren('content');
+      console.log(distributed);
+      this.animationConfig['entry'][0].nodes = Array.prototype.slice.call(distributed);
+      this.playAnimation('entry');
+      //console.log('played');
+    }
+
 
   });
 </script>
