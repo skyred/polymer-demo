@@ -3,3 +3,7 @@ An attempt to port [techyizu.github.io](http://techyizu.github.io) to Drupal usi
 
 
 ![Screen](.docs/animations.gif)
+
+# Known Issues
+
+Compatibility issues with RefreshLess.
