@@ -21,6 +21,7 @@ libraries:
  - twig_polymer/webcomponents-lite
  - studio/global-styling
  - monomer/enable-shadowdom
+ - studio/override
 # version: VERSION
 # core: 8.x
 regions:

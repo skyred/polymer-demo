@@ -1,4 +1,4 @@
-<a class="event-link" href="{{ url }}">
+<a class="event-link" href="{{ url }}"{{ attributes }}>
     <div class="chip-top" style="background-image:url({{ file_url(node.field_image.entity.fileuri) }})"></div>
     <div class="chip-bottom">
         <div class="chip-title">{{ node.getTitle() | raw }}</div>
