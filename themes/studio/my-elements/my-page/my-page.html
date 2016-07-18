@@ -31,8 +31,8 @@
       <paper-toolbar id="toolbar">
         <div class="spacer"></div>
         <div class="middle indent bottom-text">
-          <div class="title">Techyizu</div>
-          <div class="subtitle">Connecting Shanghai's Startup and Tech Community</div>
+          <div class="title">[[ siteName ]]</div>
+          <div class="subtitle">[[ siteSlogan ]]</div>
         </div>
         <content select="paper-tabs">
         </content>
@@ -55,11 +55,8 @@
         Polymer.NeonAnimationRunnerBehavior
       ],
       properties: {
-        page: {
-          type: String,
-          reflectToAttribute: true,
-          observer: '_pageChanged'
-        },
+        siteName: String,
+        siteSlogan: String,
 
         animationConfig: {
           type: Object,
@@ -76,17 +73,8 @@
             };
           }
         }
-
       },
 
-      _pageChanged: function(page) {
-        // page is a sudo path for event; we might create a new template in the future
-        if (page == 'page') page = 'event';
-
-        // load page import on demand.
-        this.importHref(
-          this.resolveUrl('my-' + page + '.html'), null, null, true);
-      },
 
       ready: function() {
         this.playAnimation('entry');

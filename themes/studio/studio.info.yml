@@ -19,7 +19,6 @@ description: 'A demo studio theme using Polymer base theme.'
 package: Web Components
 libraries:
  - twig_polymer/webcomponents-lite
- - studio/global-styling
  - monomer/enable-shadowdom
  - studio/override
 # version: VERSION

@@ -55,9 +55,11 @@
         text-transform: uppercase;
         z-index: 10;
       }
+      :host::content paper-tab,
       ::content paper-tab {
         background: rgba(0, 0, 0, .5);
       }
+      :host::content paper-tab[link] a,
       ::content paper-tab[link] a {
         /* These mixins (from iron-flex-layout) center the link text. */
         @apply(--layout-horizontal);

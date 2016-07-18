@@ -45,7 +45,8 @@
 #}
 {% polymer import "my-page/my-page.html" %}
 <div class="layout-container">
-  <my-page>
+  <my-page site-name="{{ site_name }}"
+           site-slogan="{{ site_slogan }}">
     <header role="banner">
       {{ page.header }}
     </header>
