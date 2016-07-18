@@ -1,0 +1,21 @@
+<link rel="import" href="../polymer/polymer.html">
+<dom-module id="my-node-styles">
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 16px;
+        max-width: 1024px;
+        margin: 0 auto;
+      }
+      #heroimg {
+        max-width: 100%;
+        float: right;
+        margin: 20px;
+      }
+      :host::content .markdown-html img:first-child {
+        display: none;
+      }
+    </style>
+  </template>
+</dom-module>

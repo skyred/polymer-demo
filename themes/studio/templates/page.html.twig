@@ -43,9 +43,9 @@
  * @see html.html.twig
  */
 #}
-{% polymer import "my-app.html" %}
+{% polymer import "my-page/my-page.html" %}
 <div class="layout-container">
-  <my-app>
+  <my-page>
     <header role="banner">
       {{ page.header }}
     </header>
@@ -61,5 +61,5 @@
         {{ page.footer }}
       </footer>
     {% endif %}
-  </my-app>
+  </my-page>
 </div>{# /.layout-container #}

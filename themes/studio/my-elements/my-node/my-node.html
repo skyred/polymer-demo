@@ -1,0 +1,90 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-ajax/iron-ajax.html">
+<link rel="import" href="../marked-element/marked-element.html">
+<link rel="import" href="../app-route/app-location.html">
+<link rel="import" href="../app-route/app-route.html">
+<link rel="import" href="../neon-animation/neon-shared-element-animatable-behavior.html">
+<link rel="import" href="my-node-styles.html">
+
+<dom-module id="my-node">
+
+  <!-- Defines the element's style and local DOM -->
+  <template>
+    <style include="my-node-styles"></style>
+    <img id="heroimg" src="[[heroImgUrl]]" />
+    <content select="marked-element"></content>
+  </template>
+
+  <!-- Creates the element's prototype and registers it -->
+  <script>
+    Polymer({
+      is: 'my-node',
+
+      behaviors: [
+        Polymer.NeonSharedElementAnimatableBehavior,
+        Polymer.NeonAnimationRunnerBehavior,
+      ],
+
+      properties: {
+       heroImgUrl: {
+          type: String,
+        },
+
+        sharedElements: {
+          type: Object,
+          value: function() {
+            return {
+              'hero': this.$.heroimg,
+            }
+          }
+        },
+
+        animationConfig: {
+          type: Object,
+          value: function() {
+            return {
+              'entry': [{
+                name: 'hero-animation',
+                id: 'hero',
+                toPage: this,
+              },{
+                name: 'fade-in-animation',
+                node: this,
+                timing: {
+                  duration: 600,
+                  easing: 'ease-in'
+                }
+              }, {
+                name: 'hero-animation',
+                id: 'hero',
+                node: this.$.heroimg,
+              }],
+              'exit': [{
+                name: 'fade-out-animation',
+                node: this,
+                timing: {
+                  duration: 200
+                }
+              }]
+            }
+          }
+        }
+      },
+
+      handleResponse: function () {
+        //reset this url to null
+        this.heroImgUrl = "";
+        this.async(function() {
+          var imgUrlPattern  = /(!\[.*?\]\()(.+?)(\))/;
+          this.heroImgUrl = this.body.match(imgUrlPattern)[2];
+        });
+      },
+
+      ready: function () {
+        this.playAnimation('entry');
+      }
+
+    });
+  </script>
+
+</dom-module>

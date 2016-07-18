@@ -28,10 +28,7 @@ regions:
   header: Header
   primary_menu: 'Primary menu'
   highlighted: Highlighted
-  featured_top: 'Featured top'
-  breadcrumb: Breadcrumb
   content: Content
-  footer: 'Footer'
 libraries-override:
   classy/base: false
 
