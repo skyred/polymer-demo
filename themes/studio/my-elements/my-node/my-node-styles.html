@@ -16,6 +16,13 @@
       :host::content .markdown-html img:first-child {
         display: none;
       }
+
+      ::content marked-element a:link,
+      ::content marked-element a:visited,
+      ::content marked-element ::content a:link,
+      ::content marked-element ::content a:visited {
+        color: blue;
+      }
     </style>
   </template>
 </dom-module>
