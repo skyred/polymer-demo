@@ -1,0 +1,20 @@
+uuid: 21b03342-8e8c-4e18-9827-9b125552de97
+langcode: en
+status: false
+dependencies:
+  theme:
+    - monomer
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: monomer_page_title
+theme: monomer
+region: '-1'
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

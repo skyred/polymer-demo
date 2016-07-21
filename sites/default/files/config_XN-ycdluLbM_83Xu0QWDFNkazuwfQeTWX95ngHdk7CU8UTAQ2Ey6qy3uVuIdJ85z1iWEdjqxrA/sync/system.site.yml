@@ -1,7 +1,7 @@
 uuid: f9d28ee4-fb14-4afc-b16c-6219d543a9d6
 name: 'Polymer demo'
 mail: demo@demo.com
-slogan: ''
+slogan: 'Site slogan'
 page:
   403: ''
   404: ''

@@ -5,3 +5,5 @@ path_components: bower_components
 auto_verbatim: true
 _core:
   default_config_hash: OAqG7fLOUaS33e_8ak6aDQToJLW7IFhYtZ_dWB1X4Zs
+debug_mode: false
+max_age: '3600'

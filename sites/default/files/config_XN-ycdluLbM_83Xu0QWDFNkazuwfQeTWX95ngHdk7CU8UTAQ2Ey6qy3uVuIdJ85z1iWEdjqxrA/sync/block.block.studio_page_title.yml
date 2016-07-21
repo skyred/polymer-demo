@@ -9,7 +9,7 @@ _core:
 id: studio_page_title
 theme: studio
 region: '-1'
-weight: 0
+weight: -3
 provider: null
 plugin: page_title_block
 settings:

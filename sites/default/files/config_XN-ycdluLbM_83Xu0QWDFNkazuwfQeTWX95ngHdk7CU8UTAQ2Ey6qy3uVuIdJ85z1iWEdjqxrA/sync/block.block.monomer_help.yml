@@ -1,0 +1,22 @@
+uuid: 08079c65-67f4-4ce0-81cb-ae5ae4a893e3
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - monomer
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: monomer_help
+theme: monomer
+region: '-1'
+weight: -1
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

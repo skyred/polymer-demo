@@ -1,6 +1,6 @@
 uuid: 25d3429a-7719-4da6-8454-8ccd24ab9a79
 langcode: en
-status: false
+status: true
 dependencies:
   theme:
     - studio
@@ -8,8 +8,8 @@ _core:
   default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
 id: studio_local_tasks
 theme: studio
-region: '-1'
-weight: 2
+region: content
+weight: -6
 provider: null
 plugin: local_tasks_block
 settings:

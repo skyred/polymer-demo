@@ -11,7 +11,7 @@ _core:
 id: studio_breadcrumbs
 theme: studio
 region: '-1'
-weight: 3
+weight: -6
 provider: null
 plugin: system_breadcrumb_block
 settings:

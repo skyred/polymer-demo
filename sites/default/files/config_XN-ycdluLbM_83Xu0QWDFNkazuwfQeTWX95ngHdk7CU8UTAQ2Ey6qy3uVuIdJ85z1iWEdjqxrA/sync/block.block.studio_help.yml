@@ -11,7 +11,7 @@ _core:
 id: studio_help
 theme: studio
 region: '-1'
-weight: -1
+weight: -4
 provider: null
 plugin: help_block
 settings:

@@ -1,0 +1,22 @@
+uuid: 1d68520a-2972-4981-b738-2a28fb2c5ba7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - monomer
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: monomer_content
+theme: monomer
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
